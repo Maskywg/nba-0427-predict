@@ -49,6 +49,18 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
 .name-box input::placeholder{color:#8aaacc}
 .name-box input:disabled{opacity:.4;cursor:not-allowed}
 
+/* ── 傷兵報告 ── */
+.injury-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 24px;margin-bottom:24px;animation:slideUp .5s ease .1s both}
+.injury-title{font-size:11px;font-weight:700;letter-spacing:2px;color:#e07020;text-transform:uppercase;margin-bottom:14px}
+.injury-game{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.injury-game:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.injury-matchup{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:6px}
+.injury-list{display:flex;flex-wrap:wrap;gap:6px}
+.i-tag{font-size:12px;padding:3px 10px;border-radius:100px;font-weight:700;white-space:nowrap}
+.i-out{background:rgba(200,16,46,.1);color:#C8102E;border:1px solid rgba(200,16,46,.3)}
+.i-doubt{background:rgba(220,120,0,.1);color:#c06000;border:1px solid rgba(220,120,0,.3)}
+.i-q{background:rgba(29,66,138,.1);color:#1D428A;border:1px solid rgba(29,66,138,.3)}
+
 .sec{display:flex;align-items:center;gap:12px;margin:32px 0 14px}
 .sec-label{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
 .sec-line{flex:1;height:1px;background:linear-gradient(90deg,currentColor,transparent);opacity:.3}
@@ -170,6 +182,40 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
     <div class="banner-sub" id="bsub">截止前可隨時修改，提交後即時顯示在排行榜</div>
   </div>
   <div id="countdown">--:--:--</div>
+</div>
+
+<div class="injury-box">
+  <div class="injury-title">🚑 傷兵報告</div>
+
+  <div class="injury-game">
+    <div class="injury-matchup">暴龍 vs 騎士</div>
+    <div class="injury-list">
+      <span class="i-tag i-out">❌ Quickley OUT（暴龍）</span>
+    </div>
+  </div>
+
+  <div class="injury-game">
+    <div class="injury-matchup">76人 vs 塞爾提克</div>
+    <div class="injury-list">
+      <span class="i-tag i-doubt">⚠️ Embiid DOUBTFUL（76人）</span>
+    </div>
+  </div>
+
+  <div class="injury-game">
+    <div class="injury-matchup">拓荒者 vs 馬刺</div>
+    <div class="injury-list">
+      <span class="i-tag i-out">❌ Lillard OUT（拓荒者）</span>
+      <span class="i-tag i-q">❓ Wembanyama QUESTIONABLE（馬刺）</span>
+    </div>
+  </div>
+
+  <div class="injury-game">
+    <div class="injury-matchup">火箭 vs 湖人</div>
+    <div class="injury-list">
+      <span class="i-tag i-out">❌ Luka Dončić OUT（湖人）</span>
+      <span class="i-tag i-q">❓ Kevin Durant QUESTIONABLE（火箭）</span>
+    </div>
+  </div>
 </div>
 
 <div class="name-box">
