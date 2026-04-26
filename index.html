@@ -154,10 +154,41 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
 }
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--gold);color:#fff;font-weight:700;padding:13px 26px;border-radius:100px;font-size:14px;transition:transform .4s cubic-bezier(.34,1.56,.64,1);z-index:100;white-space:nowrap;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── 昨日冠軍公告 ── */
+.champ-banner{background:linear-gradient(135deg,#fffbe6,#fff3cc);border:2px solid #FFD700;border-radius:20px;padding:20px 22px;margin-bottom:16px;animation:slideUp .6s ease both;box-shadow:0 6px 24px rgba(255,200,0,.18)}
+.champ-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.champ-trophy{font-size:26px}
+.champ-title{font-size:13px;font-weight:900;color:#7a5000;letter-spacing:1px}
+.champ-date{font-size:11px;color:#a07820;margin-top:2px}
+.champ-names{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.champ-chip{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#3a2000;font-weight:900;font-size:14px;padding:7px 16px;border-radius:100px;box-shadow:0 3px 10px rgba(255,180,0,.3)}
+.champ-runners{display:flex;flex-wrap:wrap;gap:6px}
+.runner-chip{display:inline-flex;align-items:center;gap:4px;background:rgba(255,200,0,.12);color:#8a6000;font-size:12px;font-weight:700;padding:4px 11px;border-radius:100px;border:1px solid rgba(255,200,0,.4)}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<!-- 昨日 4/26 冠軍公告 -->
+<div class="champ-banner">
+  <div class="champ-top">
+    <div class="champ-trophy">🏆</div>
+    <div>
+      <div class="champ-title">🎉 昨日 4/26 預測冠軍</div>
+      <div class="champ-date">四場全猜對，恭喜！</div>
+    </div>
+  </div>
+  <div class="champ-names">
+    <span class="champ-chip">👑 masky</span>
+  </div>
+  <div class="champ-runners">
+    <span style="font-size:11px;color:#a07820;font-weight:700;width:100%;margin-bottom:4px">3/4 亞軍：</span>
+    <span class="runner-chip">🥈 CurryEason</span>
+    <span class="runner-chip">🥈 Mn</span>
+    <span class="runner-chip">🥈 抽筋</span>
+  </div>
+</div>
 
 <!-- 昨日結果連結 -->
 <a class="prev-link" href="https://maskywg.github.io/nba-0426-predict/" target="_blank">
