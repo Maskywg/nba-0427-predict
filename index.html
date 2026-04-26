@@ -22,6 +22,12 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 /* ── 昨日結果連結 ── */
 .prev-link{background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px 18px;margin-bottom:18px;display:flex;align-items:center;gap:10px;animation:dn .5s ease both;text-decoration:none;color:var(--text);transition:box-shadow .2s}
 .prev-link:hover{box-shadow:0 4px 18px rgba(29,66,138,.15)}
+.codex-link{background:linear-gradient(135deg,#fff8f0,#fff3e0);border:1px solid #f0c090;border-radius:14px;padding:13px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);transition:box-shadow .2s;animation:slideUp .5s ease .05s both}
+.codex-link:hover{box-shadow:0 4px 18px rgba(220,120,30,.18)}
+.codex-icon{font-size:22px}
+.codex-text{flex:1}
+.codex-title{font-size:12px;font-weight:900;color:#b05010;letter-spacing:1px}
+.codex-sub{font-size:11px;color:#c07030;margin-top:1px}
 .prev-icon{font-size:20px}
 .prev-text{flex:1}
 .prev-title{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px}
@@ -250,6 +256,14 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
     </div>
   </div>
 </div>
+
+<a class="codex-link" href="https://maskywg.github.io/codex2026/" target="_blank">
+  <div class="codex-icon">📊</div>
+  <div class="codex-text">
+    <div class="codex-title">🔥 2026 季後賽戰力分析</div>
+    <div class="codex-sub">16 支隊伍完整評分 · 傷兵影響 · 系列賽解析 →</div>
+  </div>
+</a>
 
 <div class="name-box">
   <label>📝 請輸入你的名字</label>
