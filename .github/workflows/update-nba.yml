@@ -1,8 +1,8 @@
-name: 🏀 自動更新 NBA 賽果
+name: 🏀 自動更新 NBA 賽果與傷兵
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/15 * * * *'   # 每 15 分鐘執行一次
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: 安裝套件
         run: pip install requests
+
       - name: 抓取 ESPN 賽果並更新 Firestore
         run: python3 scripts/update_results.py
+
+      - name: 抓取 ESPN 傷兵報告並更新網頁
+        run: python3 scripts/update_injuries.py
+
+      - name: 提交傷兵更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "🤖 自動更新：傷兵報告"
+          git push
