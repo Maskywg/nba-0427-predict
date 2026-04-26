@@ -87,6 +87,7 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
 .lock-overlay{position:absolute;inset:0;background:rgba(220,230,255,.8);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#1D428A;letter-spacing:2px;backdrop-filter:blur(3px);z-index:5}
 
 .submit-wrap{margin-top:36px;text-align:center;animation:slideUp .5s ease .7s both}
+.submit-hint{font-size:13px;color:var(--muted);margin-bottom:12px;letter-spacing:.5px}
 .sub-btn{background:linear-gradient(135deg,var(--red),#e03050);color:#fff;border:none;padding:18px 56px;border-radius:100px;font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:3px;cursor:pointer;transition:all .25s;box-shadow:0 8px 24px rgba(200,16,46,.3)}
 .sub-btn:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 12px 32px rgba(200,16,46,.4)}
 .sub-btn:active:not(:disabled){transform:scale(.97)}
@@ -179,6 +180,7 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
 <div id="matches-container"></div>
 
 <div class="submit-wrap">
+  <p class="submit-hint">🎁 提交後送NBA球星海報</p>
   <button class="sub-btn" id="subbtn" onclick="submitPrediction()">🏀 提交預測</button>
 </div>
 <div class="poster-link" id="poster-link">
