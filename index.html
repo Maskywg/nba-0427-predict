@@ -127,6 +127,8 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
 .lb-rank.g{color:#FFD700}.lb-rank.s{color:#C0C0C0}.lb-rank.b{color:#CD7F32}
 .lb-name{font-weight:700;font-size:14px}
 .me-tag{font-size:10px;color:#C8102E;margin-left:6px}
+.prev-champ{font-size:10px;font-weight:900;background:linear-gradient(135deg,#FFD700,#FFA500);color:#3a2000;padding:2px 8px;border-radius:100px;margin-left:5px;white-space:nowrap}
+.prev-runner{font-size:10px;font-weight:900;background:rgba(192,192,192,.25);color:#666;border:1px solid #ccc;padding:2px 8px;border-radius:100px;margin-left:5px;white-space:nowrap}
 .lb-pick{font-size:11px;color:var(--muted)}
 .lb-pick.on{color:var(--text);font-weight:700}
 .lb-pick.correct{color:#16a34a;font-weight:900;background:rgba(22,163,74,.1);border-radius:6px;padding:1px 4px}
@@ -446,6 +448,10 @@ window.deleteMe = async function(){
 // ── 排行榜渲染 ────────────────────────────────────────
 const SYM=['🥇','🥈','🥉'],CLS=['g','s','b'];
 const MATCH_NAMES=['暴龍/騎士','拓荒者/馬刺','76人/塞爾提克','火箭/湖人'];
+// ── 昨日 4/26 冠亞軍名單 ──
+const PREV_CHAMPS  = ['masky'];
+const PREV_RUNNERS = ['CurryEason','Mn','抽筋'];
+
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 function renderLB(){
@@ -489,7 +495,7 @@ function renderLB(){
       <div class="lb-row ${isMe?'me':''}" ${rowStyle}>
         <div class="lb-rank ${allCorrect?'g':CLS[i]||''}">${allCorrect?'👑':SYM[i]||(i+1)}</div>
         <div class="lb-name">
-          <div class="crown-row">${esc(e.name)}${isMe?'<span class="me-tag">← 你</span>':''}${crownHtml}${scoreBadge}</div>
+          <div class="crown-row">${esc(e.name)}${isMe?'<span class="me-tag">← 你</span>':''}${PREV_CHAMPS.includes(e.name)?'<span class="prev-champ">👑 昨日冠軍</span>':PREV_RUNNERS.includes(e.name)?'<span class="prev-runner">🥈 昨日亞軍</span>':''}${crownHtml}${scoreBadge}</div>
           <div class="lb-sub">${sub}</div>
         </div>
         ${cells}${delBtn}
