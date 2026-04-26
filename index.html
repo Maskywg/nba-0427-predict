@@ -160,6 +160,13 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
   .lb-pick{display:none}
   .lb-sub{display:block}
 }
+.next-link{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 20px;margin-top:32px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);transition:box-shadow .2s}
+.next-link:hover{box-shadow:0 4px 18px rgba(29,66,138,.15)}
+.next-icon{font-size:22px}
+.next-text{flex:1}
+.next-title{font-size:13px;font-weight:900;color:#1D428A;letter-spacing:1px}
+.next-url{font-size:11px;color:#1D428A;text-decoration:underline;margin-top:2px}
+.next-arrow{font-size:18px;color:#1D428A;font-weight:900}
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--gold);color:#fff;font-weight:700;padding:13px 26px;border-radius:100px;font-size:14px;transition:transform .4s cubic-bezier(.34,1.56,.64,1);z-index:100;white-space:nowrap;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0)}
 
@@ -302,6 +309,17 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,9vw,76px);line-heigh
 </div>
 
 </div>
+
+<!-- 明日賽程預測 -->
+<a class="next-link" href="https://maskywg.github.io/nba-0428-predict/" target="_blank">
+  <div class="next-icon">🗓️</div>
+  <div class="next-text">
+    <div class="next-title">明日 4/28 賽程預測</div>
+    <div class="next-url">maskywg.github.io/nba-0428-predict/</div>
+  </div>
+  <div class="next-arrow">→</div>
+</a>
+
 <div class="toast" id="toast"></div>
 
 <script type="module">
